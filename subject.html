@@ -187,7 +187,7 @@
         <h1>Speech to singing via cycleGAN</h1>
         <p>
             Hi, This is a human evaluation page on speech to singing project.
-            Each sample includes about 3 seconds read, and about two 5 seconds singing sound. You will be asked to  <i> which one is more natrual </i> for each sample.
+            Each sample includes one read audio and two singing audios. Our singing audio is generated based on the read. You will be asked to  <i> which audio is more natrual </i> for each sample.
             And everytime you refresh the webpage (or after you press the "submit"), you could get different music samples.
             We would appreciate it if you could help us fill this questionnaire several times. THANKS! <br><br>
         </p> 
@@ -201,11 +201,13 @@
         
         <div id="audio_content2-1"></div>
         <script>
-            var data = [['speech2singing/ad vs mse/sample1/ad.wav']];
-            var link1_1 = data[0];
-            var link2_2 = data[0];
-            var link3_3 = data[0];
-            document.getElementById("audio_content2-1").innerHTML = '<strong># 1st sample</strong><br><audio controls controlsList="nodownload"><source src="' + link1_1 + '" type="audio/mpeg"></audio><br><strong>'
+            var data = [['speech2singing/ad vs mse/sample1/read.wav', 'speech2singing/ad vs mse/sample1/ad.wav', 'speech2singing/ad vs mse/sample1/mse.wav']];
+            var link1_1 = data[0][0];
+            var link2_2 = data[0][1];
+            var link3_3 = data[0][2];
+            document.getElementById("audio_content2-1").innerHTML = '<strong># 1st sample</strong><br><audio controls controlsList="nodownload"><source src="' + link1_1 + '" type="audio/mpeg"></audio><br><strong>'<br><br>
+            document.getElementById("audio_content2-1").innerHTML = '<strong># 1st sample</strong><br><audio controls controlsList="nodownload"><source src="' + link1_2 + '" type="audio/mpeg"></audio><br><strong>'<br><br>
+            document.getElementById("audio_content2-1").innerHTML = '<strong># 1st sample</strong><br><audio controls controlsList="nodownload"><source src="' + link1_3 + '" type="audio/mpeg"></audio><br><strong>'<br><br>
                 //How pleasant:</strong><form><input type="radio" name="pleasant-1.1" value="1"> 1 (worst) &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="2"> 2 &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="3"> 3 &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="4"> 4 &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="5"> 5 (best) &nbsp;&nbsp;&nbsp;</form><strong>How rhythmic:</strong><form><input type="radio" name="rhythmic-1.1" value="1"> 1 (worst) &nbsp;&nbsp;&nbsp;<input type="radio" name="rhythmic-1.1" value="2"> 2 &nbsp;&nbsp;&nbsp;<input type="radio" name="rhythmic-1.1" value="3"> 3 &nbsp;&nbsp;&nbsp;<input type="radio" name="rhythmic-1.1" value="4"> 4 &nbsp;&nbsp;&nbsp;<input type="radio" name="rhythmic-1.1" value="5"> 5 (best) &nbsp;&nbsp;&nbsp;</form></form><strong>How following the prompt (continuation):</strong><form><input type="radio" name="continuation-1.1" value="1"> 1 (worst) &nbsp;&nbsp;&nbsp;<input type="radio" name="continuation-1.1" value="2"> 2 &nbsp;&nbsp;&nbsp;<input type="radio" name="continuation-1.1" value="3"> 3 &nbsp;&nbsp;&nbsp;<input type="radio" name="continuation-1.1" value="4"> 4 &nbsp;&nbsp;&nbsp;<input type="radio" name="continuation-1.1" value="5"> 5 (best) &nbsp;&nbsp;&nbsp;</form><br><br>';
 
            // document.getElementById("audio_content2-1").innerHTML += '<strong># 2nd sample</strong><br><audio controls controlsList="nodownload"><source src="' + link2_2 + '" type="audio/mpeg"></audio><br><strong>How pleasant:</strong><form><input type="radio" name="pleasant-1.2" value="1"> 1 (worst) &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.2" value="2"> 2 &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.2" value="3"> 3 &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.2" value="4"> 4 &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.2" value="5"> 5 (best) &nbsp;&nbsp;&nbsp;</form><strong>How rhythmic:</strong><form><input type="radio" name="rhythmic-1.2" value="1"> 1 (worst) &nbsp;&nbsp;&nbsp;<input type="radio" name="rhythmic-1.2" value="2"> 2 &nbsp;&nbsp;&nbsp;<input type="radio" name="rhythmic-1.2" value="3"> 3 &nbsp;&nbsp;&nbsp;<input type="radio" name="rhythmic-1.2" value="4"> 4 &nbsp;&nbsp;&nbsp;<input type="radio" name="rhythmic-1.2" value="5"> 5 (best) &nbsp;&nbsp;&nbsp;</form></form><strong>How following the prompt (continuation):</strong><form><input type="radio" name="continuation-1.2" value="1"> 1 (worst) &nbsp;&nbsp;&nbsp;<input type="radio" name="continuation-1.2" value="2"> 2 &nbsp;&nbsp;&nbsp;<input type="radio" name="continuation-1.2" value="3"> 3 &nbsp;&nbsp;&nbsp;<input type="radio" name="continuation-1.2" value="4"> 4 &nbsp;&nbsp;&nbsp;<input type="radio" name="continuation-1.2" value="5"> 5 (best) &nbsp;&nbsp;&nbsp;</form><br><br>';
