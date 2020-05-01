@@ -1,6 +1,28 @@
 <html>
     <body>
-        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+
+        <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyBi3tcd5MsbSsTUl0oSA6SvksCK0mA3HOI",
+            authDomain: "speech2singing.firebaseapp.com",
+            databaseURL: "https://speech2singing.firebaseio.com",
+            projectId: "speech2singing",
+            storageBucket: "speech2singing.appspot.com",
+            messagingSenderId: "655101259137",
+            appId: "1:655101259137:web:1ab8e624a37d7f98088c80",
+            measurementId: "G-G4PTGP351G"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+        </script>
         <!-- for submit button -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
@@ -33,6 +55,7 @@
             };
         </script>
         <script type="text/javascript">
+            var db = firebase.firestore();
             function myGetItem() {
                 var handler = document.getElementsByName("model");
                 for(var i=0;i<handler.length;i++) { 
@@ -65,34 +88,15 @@
                 };
 
 
-                $.ajax({
-                    beforeSend: function(request) {
-                        request.setRequestHeader('Access-Control-Allow-Origin', '*');
-                    },
-                    url: "https://docs.google.com/forms/d/e/1FAIpQLSflHgFgZw92RuuaEaBwMZgB-wb7zucv04AxIz_9Ey2EjFVizg/viewform",
-                    //crossDomain: true,
-                    
-                    //withCredentials: true,
-                        //"https://docs.google.com/forms/d/e/1FAIpQLSdwycjfSrN5IX6ir2CXEQg5HUrmvStIRXFeMAKDehsBSkq4Vg/viewform",
-                    data: {
-                        "entry.2023411165" : a,//model,
-                        "entry.2088726427" : b,//ad,
-                        "entry.121760934" : c,//vocoder,
-                        "entry.384611517" : d,//original,
-                        "entry.1064165071" : e,//melgan,
-                        
-                    },
-                    type: "POST",
-                    //dataType: "xml",
-                    statusCode: {
-                        0: function() {
-                        },
-                        200: function() {  
-                        },
-                        400: function() {
-                        }
-                    }
+                db.collection("data").doc("data").set({
+                    model: a,
+                    ad: b,
+                    vocoder: c,
+                    original: d,
+                    melgan: e
+                
                 });
+                        
             };
             
         </script>
@@ -129,7 +133,7 @@
         </script>
         
         <div id="audio_content2-1"></div>
-        
+
         <script>
 
             var data2 = [
