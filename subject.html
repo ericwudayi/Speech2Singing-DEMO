@@ -205,10 +205,11 @@
             var data2 = [
             ['speech2singing/model_architecture/sample2/read.wav', 'speech2singing/model_architecture/sample2/jay.wav', 'speech2singing/model_architecture/sample2/my.wav'],
             ['speech2singing/model_architecture/sample3/read.wav', 'speech2singing/model_architecture/sample3/jay.wav', 'speech2singing/model_architecture/sample3/my.wav']];
-            var link2_1 = data2[0][0];
-            var link2_2 = data2[0][1];
-            var link2_3 = data2[0][2];
-            document.getElementById("audio_content2-1").innerHTML = '<strong># 1st sample: </strong><br><table><tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link2_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="pleasant-1.1" value="1"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="2"> B &nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="3"> equal'
+            var s = myGetRandom(0, 1);
+            var link2_1 = data2[s][0];
+            var link2_2 = data2[s][1];
+            var link2_3 = data2[s][2];
+            document.getElementById("audio_content2-1").innerHTML = '<strong># 1st sample: </strong><br><table><tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link2_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="model" value="1"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="model" value="2"> B &nbsp;&nbsp;<input type="radio" name="model" value="3"> equal'
         </script>
          <h1 id="header2-1"></h1>
         
@@ -221,10 +222,11 @@
             ['speech2singing/ad vs mse/sample2/read.wav', 'speech2singing/ad vs mse/sample2/mse.wav', 'speech2singing/ad vs mse/sample2/ad.wav'],
             ['speech2singing/ad vs mse/sample3/read.wav', 'speech2singing/ad vs mse/sample3/mse.wav', 'speech2singing/ad vs mse/sample1/ad.wav'],
             ['speech2singing/ad vs mse/sample4/read.wav', 'speech2singing/ad vs mse/sample4/mse.wav', 'speech2singing/ad vs mse/sample4/ad.wav']];
-            var link1_1 = data[0][0];
-            var link1_2 = data[0][1];
-            var link1_3 = data[0][2];
-            document.getElementById("audio_content2-3").innerHTML = '<strong># 1st sample</strong><br><table><tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link1_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="pleasant-1.1" value="1"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="2"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="pleasant-1.1" value="3"> equal'
+            var ss = myGetRandom(0, 3);
+            var link1_1 = data[ss][0];
+            var link1_2 = data[ss][1];
+            var link1_3 = data[ss][2];
+            document.getElementById("audio_content2-3").innerHTML = '<strong># 1st sample</strong><br><table><tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link1_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="ad" value="1"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="ad" value="2"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="ad" value="3"> equal'
            
         </script>
         <script>
@@ -237,9 +239,10 @@
             ['speech2singing/melgan vocoder/sample3/griff.wav', 'speech2singing/vocoder/sample3/melgan.wav'],
             ['speech2singing/vocoder/sample4/griff.wav', 'speech2singing/vocoder/sample4/melgan.wav']];
             
-            var link3_2 = data3[0][0];
-            var link3_3 = data3[0][1];
-            document.getElementById("audio_content2-2").innerHTML = '<strong># 1st sample</strong><br><table><tr> </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="pleasant-1.1" value="1"> A  &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="2"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="pleasant-1.1" value="3"> equal'
+            var sss = myGetRandom(0, 3);
+            var link3_2 = data3[sss][0];
+            var link3_3 = data3[sss][1];
+            document.getElementById("audio_content2-2").innerHTML = '<strong># 1st sample</strong><br><table><tr> </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="vocoder" value="1"> A  &nbsp;&nbsp;&nbsp;<input type="radio" name="vocoder" value="2"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="vocoder" value="3"> equal'
 
         </script>
         <script>
@@ -253,8 +256,9 @@
             ['speech2singing/melgan vocoder/sample4/ori.wav'],
             ['speech2singing/melgan vocoder/sample5/ori.wav']
             ];
-            var link4_1 = data4[0];
-            document.getElementById("audio_content2-4").innerHTML = '<strong># 4st sample MOS Test</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link4_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="pleasant-1.1" value="1"> 1(worst)  &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="pleasant-1.1" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="pleasant-1.1" value="5"> 5(best)'
+            var ssss = myGetRandom(0, 4);
+            var link4_1 = data4[ssss];
+            document.getElementById("audio_content2-4").innerHTML = '<strong># 4st sample MOS Test</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link4_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="original" value="1"> 1(worst)  &nbsp;&nbsp;&nbsp;<input type="radio" name="original" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="original" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="original" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="original" value="5"> 5(best)'
         </script>
         <script>
             document.getElementById("header2-5")
@@ -267,8 +271,9 @@
             ['speech2singing/melgan vocoder/sample4/melgan.wav'],
             ['speech2singing/melgan vocoder/sample5/melgan.wav']
             ];
-            var link5_1 = data5[0];
-            document.getElementById("audio_content2-5").innerHTML = '<strong># 5st sample MOS Test</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link5_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="pleasant-1.1" value="1"> 1(worst)  &nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="pleasant-1.1" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="pleasant-1.1" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="pleasant-1.1" value="5"> 5(best)'
+            var sssss = myGetRandom(0, 4);
+            var link5_1 = data5[sssss];
+            document.getElementById("audio_content2-5").innerHTML = '<strong># 5st sample MOS Test</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link5_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="melgan" value="1"> 1(worst)  &nbsp;&nbsp;&nbsp;<input type="radio" name="melgan" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="melgan" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="melgan" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="melgan" value="5"> 5(best)'
         </script>
         
            
@@ -278,7 +283,7 @@
         <p>
             <strong>
                 Thank you for your participation. Please press the submit button. <br>
-                After you press the button, this page will refresh and you can directly enjoy the other samples!
+                After you press the button, this page will refresh!
             </strong>
         </p>
         <button type="submit" onclick="myGetItem()">Submit</button>
