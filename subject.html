@@ -22,7 +22,7 @@
           // Initialize Firebase
           firebase.initializeApp(firebaseConfig);
           firebase.analytics();
-          var db = firebase.firestore();
+          var database = firebase.database();
         </script>
 
         
@@ -59,15 +59,14 @@
                     e = handler[i].value; 
                 };
 
-
-                db.collection("data").doc("data").set({
+                firebase.database().ref('data/data').set({
                     "model": a,
                     "ad": b,
                     "vocoder": c,
                     "original": d,
                     "melgan": e
-                
                 });
+                
                         
             };
             
