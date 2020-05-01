@@ -68,12 +68,12 @@
                     washingtonRef.update({
                         A: firebase.firestore.FieldValue.increment(1)
                     });
-                };
-                else if (a=='B'){
+                }
+                else if(a=='B'){
                     washingtonRef.update({
                         B: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else{
                     washingtonRef.update({
                         equal: firebase.firestore.FieldValue.increment(1)
@@ -86,17 +86,17 @@
                     washingtonRef.update({
                         A: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else if (b=='B'){
                     washingtonRef.update({
                         B: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else{
                     washingtonRef.update({
                         equal: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
 
                 var washingtonRef = database.collection("data").doc("vocoder");
                 if (c == 'A'){
@@ -104,17 +104,17 @@
                     washingtonRef.update({
                         A: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else if (c=='B'){
                     washingtonRef.update({
                         B: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else{
                     washingtonRef.update({
                         equal: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
 
                 var washingtonRef = database.collection("data").doc("original");
                 if (d == 1){
@@ -122,27 +122,27 @@
                     washingtonRef.update({
                         1: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else if (d==2){
                     washingtonRef.update({
                         2: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else if (d==3){
                     washingtonRef.update({
                         3: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else if (d==4){
                     washingtonRef.update({
                         4: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else if (d==5){
                     washingtonRef.update({
                         5: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 
                 var washingtonRef = database.collection("data").doc("melgan");
                 if (e == 1){
@@ -150,27 +150,27 @@
                     washingtonRef.update({
                         1: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else if (e==2){
                     washingtonRef.update({
                         2: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else if (e==3){
                     washingtonRef.update({
                         3: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else if (e==4){
                     washingtonRef.update({
                         4: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 else if (e==5){
                     washingtonRef.update({
                         5: firebase.firestore.FieldValue.increment(1)
                     });
-                };
+                }
                 window.location.reload()
                         
             };
