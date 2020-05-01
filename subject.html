@@ -62,18 +62,116 @@
                     if(handler[i].checked) 
                     e = handler[i].value; 
                 };
-                var washingtonRef = database.collection("data").doc("data");
+                var washingtonRef = database.collection("data").doc("model");
+                if (a == 'A'){
+                    // Atomically add a new region to the "regions" array field.
+                    washingtonRef.update({
+                        A: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (a=='B'){
+                    washingtonRef.update({
+                        B: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else{
+                    washingtonRef.update({
+                        equal: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
 
-                // Atomically add a new region to the "regions" array field.
-                washingtonRef.update({
-                    model: firebase.firestore.FieldValue.arrayUnion(a),
-                    ad: firebase.firestore.FieldValue.arrayUnion(b),
-                    vocoder: firebase.firestore.FieldValue.arrayUnion(c),
-                    original: firebase.firestore.FieldValue.arrayUnion(d),
-                    melgan: firebase.firestore.FieldValue.arrayUnion(e),
+                var washingtonRef = database.collection("data").doc("ad");
+                if (b == 'A'){
+                    // Atomically add a new region to the "regions" array field.
+                    washingtonRef.update({
+                        A: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (b=='B'){
+                    washingtonRef.update({
+                        B: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else{
+                    washingtonRef.update({
+                        equal: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
 
-                });
+                var washingtonRef = database.collection("data").doc("vocoder");
+                if (c == 'A'){
+                    // Atomically add a new region to the "regions" array field.
+                    washingtonRef.update({
+                        A: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (c=='B'){
+                    washingtonRef.update({
+                        B: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else{
+                    washingtonRef.update({
+                        equal: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+
+                var washingtonRef = database.collection("data").doc("original");
+                if (d == 1){
+                    // Atomically add a new region to the "regions" array field.
+                    washingtonRef.update({
+                        1: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (d==2){
+                    washingtonRef.update({
+                        2: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (d==3){
+                    washingtonRef.update({
+                        3: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (d==4){
+                    washingtonRef.update({
+                        4: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (d==5){
+                    washingtonRef.update({
+                        5: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
                 
+                var washingtonRef = database.collection("data").doc("melgan");
+                if (e == 1){
+                    // Atomically add a new region to the "regions" array field.
+                    washingtonRef.update({
+                        1: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (e==2){
+                    washingtonRef.update({
+                        2: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (e==3){
+                    washingtonRef.update({
+                        3: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (e==4){
+                    washingtonRef.update({
+                        4: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                else if (e==5){
+                    washingtonRef.update({
+                        5: firebase.firestore.FieldValue.increment(1)
+                    });
+                };
+                window.location.reload()
                         
             };
             
