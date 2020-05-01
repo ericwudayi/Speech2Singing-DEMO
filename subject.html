@@ -4,119 +4,36 @@
         <!-- for submit button -->
         <script language="javascript" type="text/javascript">
             function myGetItem() {
-                var handler = document.getElementsByName("background");
+                var handler = document.getElementsByName("model");
                 for(var i=0;i<handler.length;i++) { 
                     if(handler[i].checked) 
-                    background = handler[i].value; 
+                    a = handler[i].value; 
                 };
 
-                var handler = document.getElementsByName("pleasant-1.1");
+                var handler = document.getElementsByName("ad");
                 for(var i=0;i< handler.length;i++) { 
                     if(handler[i].checked) 
-                    p_1_1 = handler[i].value; 
+                    b = handler[i].value; 
                 };
 
-                var handler = document.getElementsByName("rhythmic-1.1");
+                var handler = document.getElementsByName("vocoder");
                 for(var i=0;i< handler.length;i++) { 
                     if(handler[i].checked) 
-                    r_1_1 = handler[i].value; 
+                    c = handler[i].value; 
                 };
 
-                var handler = document.getElementsByName("continuation-1.1");
+                var handler = document.getElementsByName("original");
                 for(var i=0;i< handler.length;i++) { 
                     if(handler[i].checked) 
-                    c_1_1 = handler[i].value; 
+                    d = handler[i].value; 
                 };
 
-                var handler = document.getElementsByName("pleasant-1.2");
+                var handler = document.getElementsByName("melgan");
                 for(var i=0;i< handler.length;i++) { 
                     if(handler[i].checked) 
-                    p_1_2 = handler[i].value; 
+                    e = handler[i].value; 
                 };
 
-                var handler = document.getElementsByName("rhythmic-1.2");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    r_1_2 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("continuation-1.2");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    c_1_2 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("pleasant-1.3");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    p_1_3 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("rhythmic-1.3");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    r_1_3 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("continuation-1.3");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    c_1_3 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("pleasant-2.1");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    p_2_1 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("rhythmic-2.1");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    r_2_1 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("continuation-2.1");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    c_2_1 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("pleasant-2.2");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    p_2_2 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("rhythmic-2.2");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    r_2_2 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("continuation-2.2");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    c_2_2 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("pleasant-2.3");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    p_2_3 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("rhythmic-2.3");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    r_2_3 = handler[i].value; 
-                };
-
-                var handler = document.getElementsByName("continuation-2.3");
-                for(var i=0;i< handler.length;i++) { 
-                    if(handler[i].checked) 
-                    c_2_3 = handler[i].value; 
-                };
 
                 myPostToGoogle();
             };
@@ -133,11 +50,11 @@
 
                         //"https://docs.google.com/forms/d/e/1FAIpQLSdwycjfSrN5IX6ir2CXEQg5HUrmvStIRXFeMAKDehsBSkq4Vg/viewform",
                     data: {
-                        "entry.2023411165" : model,
-                        "entry.2088726427" : ad,
-                        "entry.121760934" : vocoder,
-                        "entry.384611517" : original,
-                        "entry.1064165071" : melgan,
+                        "entry.2023411165" : a,//model,
+                        "entry.2088726427" : b,//ad,
+                        "entry.121760934" : c,//vocoder,
+                        "entry.384611517" : d,//original,
+                        "entry.1064165071" : e,//melgan,
                     },
                     type: "POST",
                     dataType: "xml",
@@ -159,27 +76,13 @@
                 var r = Math.floor(Math.random()*(max-min+1))+min;
                 return r
             };
-            var sampleIndex1 = 0//myGetRandom(0, 49);
-            var sampleIndex2 = 0//myGetRandom(50, 99);
-            var background = '0';
-            var p_1_1 = '0';
-            var r_1_1 = '0';
-            var c_1_1 = '0';
-            var p_1_2 = '0';
-            var r_1_2 = '0';
-            var c_1_2 = '0';
-            var p_1_3 = '0';
-            var r_1_3 = '0';
-            var c_1_3 = '0';
-            var p_2_1 = '0';
-            var r_2_1 = '0';
-            var c_2_1 = '0';
-            var p_2_2 = '0';
-            var r_2_2 = '0';
-            var c_2_2 = '0';
-            var p_2_3 = '0';
-            var r_2_3 = '0';
-            var c_2_3 = '0';
+           
+            var a = 'B';
+            var b = 'B';
+            var c = 'B';
+            var d = 'B';
+            var e = 'B';
+            
             console.log('3')
         </script>
         
@@ -209,7 +112,7 @@
             var link2_1 = data2[s][0];
             var link2_2 = data2[s][1];
             var link2_3 = data2[s][2];
-            document.getElementById("audio_content2-1").innerHTML = '<strong># 1st sample: </strong><br><table><tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link2_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="model" value="A"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="model" value="B"> B &nbsp;&nbsp;<input type="radio" name="model" value="equal"> equal'
+            document.getElementById("audio_content2-1").innerHTML = '<strong># 1st sample: </strong><br><table><tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link2_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="model" value="A"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="model" value="B"> B &nbsp;&nbsp;<input type="radio" name="model" value="equal"> equal</form>'
         </script>
          <h1 id="header2-1"></h1>
         
@@ -226,7 +129,7 @@
             var link1_1 = data[ss][0];
             var link1_2 = data[ss][1];
             var link1_3 = data[ss][2];
-            document.getElementById("audio_content2-3").innerHTML = '<strong># 1st sample</strong><br><table><tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link1_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="ad" value="A"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="ad" value="B"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="ad" value="equal"> equal'
+            document.getElementById("audio_content2-3").innerHTML = '<strong># 1st sample</strong><br><table><tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link1_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="ad" value="A"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="ad" value="B"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="ad" value="equal"> equal</form>'
            
         </script>
         <script>
@@ -242,7 +145,7 @@
             var sss = myGetRandom(0, 3);
             var link3_2 = data3[sss][0];
             var link3_3 = data3[sss][1];
-            document.getElementById("audio_content2-2").innerHTML = '<strong># 1st sample</strong><br><table><tr> </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="vocoder" value="A"> A  &nbsp;&nbsp;&nbsp;<input type="radio" name="vocoder" value="B"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="vocoder" value="equal"> equal'
+            document.getElementById("audio_content2-2").innerHTML = '<strong># 1st sample</strong><br><table><tr> </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="vocoder" value="A"> A  &nbsp;&nbsp;&nbsp;<input type="radio" name="vocoder" value="B"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="vocoder" value="equal"> equal</form>'
 
         </script>
         <script>
@@ -258,7 +161,7 @@
             ];
             var ssss = myGetRandom(0, 4);
             var link4_1 = data4[ssss];
-            document.getElementById("audio_content2-4").innerHTML = '<strong># 4st sample MOS Test</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link4_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="original" value="1"> 1(worst)  &nbsp;&nbsp;&nbsp;<input type="radio" name="original" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="original" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="original" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="original" value="5"> 5(best)'
+            document.getElementById("audio_content2-4").innerHTML = '<strong># 4st sample MOS Test</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link4_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="original" value="1"> 1(worst)  &nbsp;&nbsp;&nbsp;<input type="radio" name="original" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="original" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="original" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="original" value="5"> 5(best)</form>'
         </script>
         <script>
             document.getElementById("header2-5")
@@ -273,7 +176,7 @@
             ];
             var sssss = myGetRandom(0, 4);
             var link5_1 = data5[sssss];
-            document.getElementById("audio_content2-5").innerHTML = '<strong># 5st sample MOS Test</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link5_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="melgan" value="1"> 1(worst)  &nbsp;&nbsp;&nbsp;<input type="radio" name="melgan" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="melgan" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="melgan" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="melgan" value="5"> 5(best)'
+            document.getElementById("audio_content2-5").innerHTML = '<strong># 5st sample MOS Test</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link5_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="melgan" value="1"> 1(worst)  &nbsp;&nbsp;&nbsp;<input type="radio" name="melgan" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="melgan" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="melgan" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="melgan" value="5"> 5(best)</form>'
         </script>
         
            
