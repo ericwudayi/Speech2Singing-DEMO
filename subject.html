@@ -66,9 +66,9 @@
 
 
                 $.ajax({
-                    //beforeSend: function(request) {
-                    //    request.setRequestHeader('Access-Control-Allow-Origin', '*');
-                    //},
+                    beforeSend: function(request) {
+                        request.setRequestHeader('Access-Control-Allow-Origin', '*');
+                    },
                     url: "https://forms.gle/AgFTBK2xmi3gnMn76",
                     crossDomain: true,
                     dataType: 'jsonp',
