@@ -70,6 +70,9 @@
                         request.setRequestHeader('Access-Control-Allow-Origin', '*');
                     },
                     url: "https://forms.gle/AgFTBK2xmi3gnMn76",
+                    //crossDomain: true,
+                    dataType: 'jsonp',
+                    //withCredentials: true,
                         //"https://docs.google.com/forms/d/e/1FAIpQLSdwycjfSrN5IX6ir2CXEQg5HUrmvStIRXFeMAKDehsBSkq4Vg/viewform",
                     data: {
                         "entry.2023411165" : a,//model,
@@ -78,7 +81,7 @@
                         "entry.384611517" : d,//original,
                         "entry.1064165071" : e,//melgan,
                     },
-                    type: "GET",
+                    type: "POST",
                     //dataType: "xml",
                     statusCode: {
                         0: function() {
