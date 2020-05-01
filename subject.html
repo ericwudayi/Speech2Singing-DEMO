@@ -3,7 +3,34 @@
         
         <!-- for submit button -->
 
-        <script language="javascript" type="text/javascript">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+            function myPostToGoogle() {
+                $.ajax({
+                    beforeSend: function(request) {
+                        request.setRequestHeader('Access-Control-Allow-Origin', '*');
+                    },
+                    url: "https://forms.gle/AgFTBK2xmi3gnMn76",
+
+                        //"https://docs.google.com/forms/d/e/1FAIpQLSdwycjfSrN5IX6ir2CXEQg5HUrmvStIRXFeMAKDehsBSkq4Vg/viewform",
+                    data: {
+                        "entry.2023411165" : a,//model,
+                        "entry.2088726427" : b,//ad,
+                        "entry.121760934" : c,//vocoder,
+                        "entry.384611517" : d,//original,
+                        "entry.1064165071" : e,//melgan,
+                    },
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function() {
+                        },
+                        200: function() {  
+                        },
+                        400: function() {
+                        }
+                    }
+                });
+            };
             
             function myGetItem() {
                 var handler = document.getElementsByName("model");
@@ -39,36 +66,7 @@
 
                 myPostToGoogle();
             };
-        </script>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
-            function myPostToGoogle() {
-                $.ajax({
-                    beforeSend: function(request) {
-                        request.setRequestHeader('Access-Control-Allow-Origin', '*');
-                    },
-                    url: "https://forms.gle/AgFTBK2xmi3gnMn76",
-
-                        //"https://docs.google.com/forms/d/e/1FAIpQLSdwycjfSrN5IX6ir2CXEQg5HUrmvStIRXFeMAKDehsBSkq4Vg/viewform",
-                    data: {
-                        "entry.2023411165" : a,//model,
-                        "entry.2088726427" : b,//ad,
-                        "entry.121760934" : c,//vocoder,
-                        "entry.384611517" : d,//original,
-                        "entry.1064165071" : e,//melgan,
-                    },
-                    type: "POST",
-                    dataType: "xml",
-                    statusCode: {
-                        0: function() {
-                        },
-                        200: function() {  
-                        },
-                        400: function() {
-                        }
-                    }
-                });
-            };
+            
         </script>
         <!-- for random -->
         <script>
