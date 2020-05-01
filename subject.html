@@ -69,9 +69,9 @@
                     beforeSend: function(request) {
                         request.setRequestHeader('Access-Control-Allow-Origin', '*');
                     },
-                    url: "https://docs.google.com/forms/d/e/1FAIpQLSflHgFgZw92RuuaEaBwMZgB-wb7zucv04AxIz_9Ey2EjFVizg/viewform",
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSflHgFgZw92RuuaEaBwMZgB-wb7zucv04AxIz_9Ey2EjFVizg/formResponse",
                     //crossDomain: true,
-                    Content-Type: 'application/x-www-form-urlencoded',
+                    
                     //withCredentials: true,
                         //"https://docs.google.com/forms/d/e/1FAIpQLSdwycjfSrN5IX6ir2CXEQg5HUrmvStIRXFeMAKDehsBSkq4Vg/viewform",
                     data: {
@@ -82,8 +82,8 @@
                         "entry.1064165071" : e,//melgan,
                         "submit": "Submit",
                     },
-                    type: "GET",
-                    //dataType: "xml",
+                    type: "POST",
+                    dataType: "xml",
                     statusCode: {
                         0: function() {
                         },
