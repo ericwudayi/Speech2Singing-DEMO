@@ -129,6 +129,25 @@
                     }).then(function() {console.log("OK");}).catch(function(error) {console.error("Error adding document: ", error);});
                 }
 
+                var washingtonRef = database.collection("data").doc("ad");
+                if (b2 == 'A'){
+                    // Atomically add a new region to the "regions" array field.
+                    washingtonRef.update({
+                        A: firebase.firestore.FieldValue.increment(1)
+                    }).then(function() {console.log("OK");}).catch(function(error) {console.error("Error adding document: ", error);});
+                }
+                else if (b2=='B'){
+                    console.log("??")
+                    washingtonRef.update({
+                        B: firebase.firestore.FieldValue.increment(1)
+                    }).then(function() {console.log("OK");}).catch(function(error) {console.error("Error adding document: ", error);});
+                }
+                else{
+                    washingtonRef.update({
+                        equal: firebase.firestore.FieldValue.increment(1)
+                    }).then(function() {console.log("OK");}).catch(function(error) {console.error("Error adding document: ", error);});
+                }
+
                 var washingtonRef = database.collection("data").doc("vocoder");
                 if (c == 'A'){
                     // Atomically add a new region to the "regions" array field.
@@ -137,6 +156,25 @@
                     }).then(function() {console.log("OK");}).catch(function(error) {console.error("Error adding document: ", error);});
                 }
                 else if (c=='B'){
+                    console.log("??")
+                    washingtonRef.update({
+                        B: firebase.firestore.FieldValue.increment(1)
+                    }).then(function() {console.log("OK");}).catch(function(error) {console.error("Error adding document: ", error);});
+                }
+                else{
+                    washingtonRef.update({
+                        equal: firebase.firestore.FieldValue.increment(1)
+                    }).then(function() {console.log("OK");}).catch(function(error) {console.error("Error adding document: ", error);});
+                }
+
+                var washingtonRef = database.collection("data").doc("vocoder");
+                if (c2 == 'A'){
+                    // Atomically add a new region to the "regions" array field.
+                    washingtonRef.update({
+                        A: firebase.firestore.FieldValue.increment(1)
+                    }).then(function() {console.log("OK");}).catch(function(error) {console.error("Error adding document: ", error);});
+                }
+                else if (c2=='B'){
                     console.log("??")
                     washingtonRef.update({
                         B: firebase.firestore.FieldValue.increment(1)
@@ -205,6 +243,9 @@
                         5: firebase.firestore.FieldValue.increment(1)
                     }).then(function() {window.location.reload();console.log("OK");}).catch(function(error) {console.error("Error adding document: ", error);});
                 }
+
+
+                
                 //window.location.reload()
                         
             };
