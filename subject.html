@@ -205,18 +205,20 @@
         <!-- description -->
         <h1>聲音風格轉換實驗</h1>
         <p>
-            Hi, 這是一個 說話轉聲音的 測試網站. 我們比較了各式各樣不同的演算法的結果，所以可能有些好，可能有些爛。 我們在這裡提供七個範例讓大家選擇。  每次你刷新頁面的時候，都會是不同的音檔組合。 我們非常感謝你的參與! 
+            大家好！我們正在試圖讓機器可以把人類講話的聲音變成唱歌的聲音。我們嘗試了不同的方法，現在需要大家的幫忙，來告訴我們哪些方法的效果比較好。底下總共有7個長度不到10秒的音檔，音檔總長度約為一分鐘。感謝你們的幫忙！ 
             <br><br>
+            底下問卷分為兩部分，第一部分二選一的選擇題，判斷兩個方法誰比較好。第二部分則是評分，由低到高為1分到5分。聽音檔時，我們請您盡量在安靜的地方、若可以的話並請戴上耳機進行。問卷填寫完，也請記得在最下方點選 "Submit"，以完成本問卷。我們非常感謝您的協助！!如果有任何問題，也歡迎聯絡我們  (r07922119@ntu.edu.tw)。
+
         </p> 
         
 
         <!-- audio contents set 1-->
         <h1 id="header2-1"></h1>
         <p>
-        以下測試中有一個說話的檔案 以及相對應的兩個唱歌的檔案。 你要選擇的是: <i>哪一個音檔表現的更好? </i> 
+        以下測試中有一個說話的檔案，是我們的方法的輸入。我們分別用兩個不同的方法將其轉換成歌聲。 你要選擇的是: 哪一個音檔聽起來比較好? 請先聽說話的音檔，在聽轉換後的結果 </i> 
         </p>
         <script>
-            document.getElementById("header2-1").innerHTML = "Speech to Singing sample"; 
+            document.getElementById("header2-1").innerHTML = "第一部分"; 
         </script>
         
         <div id="audio_content2-1"></div>
@@ -229,7 +231,7 @@
             var link2_1 = data2[s][0];
             var link2_2 = data2[s][1];
             var link2_3 = data2[s][2];
-            document.getElementById("audio_content2-1").innerHTML = '<strong># 1st sample: </strong><br><table><tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link2_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="model" value="A"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="model" value="B"> B &nbsp;&nbsp;<input type="radio" name="model" value="equal"> equal</form>'
+            document.getElementById("audio_content2-1").innerHTML = '<strong># 第一題: </strong><br><table><tr> <td style="color:olive;"> 說話的音檔: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link2_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> 方法 A 所轉出來的歌聲: </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> 方法 B 所轉出來的歌聲: </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link2_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>哪一個比較好呢:</strong><form><input type="radio" name="model" value="A"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="model" value="B"> B &nbsp;&nbsp;<input type="radio" name="model" value="equal"> equal</form>'
         </script>
         
         <script>
@@ -245,12 +247,10 @@
             var link1_1 = data[ss][0];
             var link1_2 = data[ss][1];
             var link1_3 = data[ss][2];
-            document.getElementById("audio_content2-2").innerHTML = '<strong># 2st sample</strong><br><table><tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link1_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="ad" value="A"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="ad" value="B"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="ad" value="equal"> equal</form>'
+            document.getElementById("audio_content2-2").innerHTML = '<strong># 第二題</strong><br><table><tr> <td style="color:olive;"> 說話的音檔:  &emsp; &emsp; </td> <td> <audio controls controlsList="nodownload"><source src="' + link1_1 + '" type="audio/mpeg"></audio> </td> </tr> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> 方法 A 所轉出來的歌聲:  </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong>方法 B 所轉出來的歌聲:  </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link1_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>哪一個比較好呢:</strong><form><input type="radio" name="ad" value="A"> A &nbsp;&nbsp;&nbsp;<input type="radio" name="ad" value="B"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="ad" value="equal"> equal</form>'
            
         </script>
-        <p>
-        在第個範例中， 我們會給你兩個音檔， 你要選擇的是哪一個音檔比較自然?
-        </p>
+        
         <script>
             document.getElementById("header2-3")
         </script>
@@ -264,11 +264,14 @@
             var sss = myGetRandom(0, 3);
             var link3_2 = data3[sss][0];
             var link3_3 = data3[sss][1];
-            document.getElementById("audio_content2-3").innerHTML = '<strong># 3st sample</strong><br><table><tr> </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> Singing A </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> Singing B </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>Which one is better:</strong><form><input type="radio" name="vocoder" value="A"> A  &nbsp;&nbsp;&nbsp;<input type="radio" name="vocoder" value="B"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="vocoder" value="equal"> equal</form>'
+            document.getElementById("audio_content2-3").innerHTML = '<strong># 第三題</strong><br><table><tr> </audio> </td> </tr></table><table><tr> <td style="color:brown;"> <strong> 方法 A 所轉出來的歌聲: </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_2 + '" type="audio/mpeg"></audio> </td> </tr><tr> <td style="color:brown;"> <strong> 方法 B 所轉出來的歌聲 </strong>: &emsp; &emsp; </td> <td>  <audio controls controlsList="nodownload"><source src="' + link3_3 + '" type="audio/mpeg"></audio> </td> </tr></table><br> <strong>哪一個比較好呢:</strong><form><input type="radio" name="vocoder" value="A"> A  &nbsp;&nbsp;&nbsp;<input type="radio" name="vocoder" value="B"> B &nbsp;&nbsp;&nbsp; <input type="radio" name="vocoder" value="equal"> equal</form>'
 
         </script>
         <p>
-        在剩下了範例中， 我們會給你一個音檔， 你要選擇的是 該音檔的自然程度，從0到5分， 越高分則音檔越棒。
+        第二部分:
+        <br>
+        以下測試中不再提供說話的音檔，請您直接針對所聽到的歌聲音檔，評是否像真人唱歌的聲音。從0到5分， 越高分代表越好。
+
         </p>
         <script>
             document.getElementById("header2-4")
@@ -283,7 +286,7 @@
             ];
             var ssss = myGetRandom(0, 4);
             var link4_1 = data4[ssss];
-            document.getElementById("audio_content2-4").innerHTML = '<strong># 4st sample MOS Test</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link4_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="original" value="1"> 1(最低)  &nbsp;&nbsp;&nbsp;<input type="radio" name="original" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="original" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="original" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="original" value="5"> 5(最高)</form>'
+            document.getElementById("audio_content2-4").innerHTML = '<strong># 第一題</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link4_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="original" value="1"> 1(最低)  &nbsp;&nbsp;&nbsp;<input type="radio" name="original" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="original" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="original" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="original" value="5"> 5(最高)</form>'
         </script>
         <script>
             document.getElementById("header2-5")
@@ -298,7 +301,7 @@
             ];
             var sssss = myGetRandom(0, 4);
             var link5_1 = data5[sssss];
-            document.getElementById("audio_content2-5").innerHTML = '<strong># 5st sample MOS Test</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link5_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="melgan" value="1"> 1(最低)  &nbsp;&nbsp;&nbsp;<input type="radio" name="melgan" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="melgan" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="melgan" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="melgan" value="5"> 5(最高)</form>'
+            document.getElementById("audio_content2-5").innerHTML = '<strong># 第二題</strong><br><table><tr> <audio controls controlsList="nodownload"><source src="' + link5_1 + '" type="audio/mpeg"></audio> </td><form><input type="radio" name="melgan" value="1"> 1(最低)  &nbsp;&nbsp;&nbsp;<input type="radio" name="melgan" value="2"> 2 &nbsp;&nbsp;&nbsp; <input type="radio" name="melgan" value="3"> 3&nbsp;&nbsp;&nbsp;<input type="radio" name="melgan" value="4"> 4 &nbsp;&nbsp;&nbsp; <input type="radio" name="melgan" value="5"> 5(最高)</form>'
         </script>
         
            
@@ -307,8 +310,7 @@
         <!-- submit button -->
         <p>
             <strong>
-                非常感謝你的參與! <br>
-                在按下提交後， 網頁會更新。 謝謝!!
+                在您按下提交後， 網頁中的音檔會全部更新，若您有意願多評價幾個音檔，可以在新的頁面繼續填答。 謝謝!
             </strong>
         </p>
         <button type="submit" onclick="myGetItem()">Submit</button>
