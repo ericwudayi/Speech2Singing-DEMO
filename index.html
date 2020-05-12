@@ -13,8 +13,10 @@
     <body>
 	    <div class="container my_text" align="center">
 	    <h1 style="color:brown;"> Speech-to-Singing Conversion in an Encoder-Decoder Framework </h1>
-		<p style="color:#808080;"> <i> Jayneel Parekh &emsp; &emsp; &emsp; Preeti Rao &emsp; &emsp; &emsp; Yi-Hsuan Yang </i> </p>
-		<p style="color:#b30000;">ICASSP 2020 Project Webpage</p>
+		<p style="color:#808080;"> <i> Da-Yi Wu &emsp; &emsp; &emsp; Yi-Hsuan Yang </i> </p>
+		<p style="color:#b30000;">INTERSPEECH 2020 Project Webpage</p>
+        <h2 style="color:brown;" id='code' align="center"> Abstract </h2>
+        <p> This paper investigates the use of generative adversarial network (GAN)-based models for converting the spectrogram of a speech signal into that of a singing one, without reference to the phoneme sequence underlying the speech. This is achieved by viewing  speech-to-singing conversion as a style transfer problem.  Specifically, given a speech input, and optionally the F0 contour of the target singing, the proposed model generates as the output a singing signal with a progressive-growing encoder/decoder architecture and boundary equilibrium GAN loss functions. Our quantitative and qualitative analysis show that the proposed model generates singing voices with much higher naturalness than an existing non adversarially-trained baseline. For reproducibility, the code will be publicly available at a GitHub repository upon paper publication.</p>
 		<div id="navbar">
 		<a class="active" href="#code" text-align:center>Code </a> &emsp; &emsp; <a class="active" href="#samples">Audio Samples</a>  &emsp; &emsp; <!-- &emsp; &emsp; &emsp; &emsp; <a class="active" href="#paper">Paper</a> -->
 		<br> <br> <br> <br>
@@ -29,7 +31,7 @@
 	    <br> <br> <br>
 		
 	    <h2 style="color:brown;" id='samples'> Audio Samples </h2>
-		Chrome is the preferred browser. The samples may not always run in Firefox. Use of headphones/earphones recommended.
+		
         <h3 style="color:blue;"> Sample A (Outputs of all systems) </h3>
         <table>
             <tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls>  <source src="speech2singing/model_architecture/sample2/read.wav" type="audio/wav">  </audio> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr>
