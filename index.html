@@ -24,23 +24,21 @@
 <p>This paper investigates the use of generative adversarial network (GAN)-based models for converting the spectrogram of a speech signal into that of a singing one, without reference to the phoneme sequence underlying the speech. This is achieved by viewing  speech-to-singing conversion as a style transfer problem.  Specifically, given a speech input, and optionally the F0 contour of the target singing, the proposed model generates as the output a singing signal with a progressive-growing encoder/decoder architecture and boundary equilibrium GAN loss functions. Our quantitative and qualitative analysis show that the proposed model generates singing voices with much higher naturalness than an existing non adversarially-trained baseline. For reproducibility, the code will be publicly available at a GitHub repository upon paper publication.</p></p>
 
 		<br> <br> <br>
-	
-	    <br> <br> <br>
 		
-	    <h2 style="color:brown;" id='samples'> Audio Samples </h2>
+	    <h2 id='samples'> Audio Samples </h2>
 		
         <h3 style="color:blue;"> Sample A </h3>
         <table>
-            <tr> <td style="color:olive;"> Input speech: &emsp; &emsp; </td> <td> <audio controls>  <source src="speech2singing/model_architecture/sample2/read.wav" type="audio/wav">  </audio> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr>
+            <tr> <td> Input speech: &emsp; &emsp; </td> <td> <audio controls>  <source src="speech2singing/model_architecture/sample2/read.wav" type="audio/wav">  </audio> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr>
         </table>
         <table>
-            <tr> <td style="color:brown;"> Jayneel: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample2/jay.wav" type="audio/wav">   </audio> </td> </tr>
+            <tr> <td style="color:Lime;"> Jayneel: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample2/jay.wav" type="audio/wav">   </audio> </td> </tr>
 
-            <tr> <td style="color:brown;"> Progressive Learning: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample2/my.wav" type="audio/wav">   </audio> </td> </tr>
+            <tr> <td style="color:Lime;"> Progressive Learning: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample2/my.wav" type="audio/wav">   </audio> </td> </tr>
 			
-			<tr> <td style="color:brown;"> MEL+MSE: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample2/mse.wav" type="audio/wav">   </audio> </td> </tr>
+			<tr> <td style="color:Lime;"> MEL+MSE: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample2/mse.wav" type="audio/wav">   </audio> </td> </tr>
 
-			<tr> <td style="color:brown;"> MEL+MSE+AD: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample2/ad.wav" type="audio/wav">   </audio> </td> </tr>
+			<tr> <td style="color:Lime;"> MEL+MSE+AD: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample2/ad.wav" type="audio/wav">   </audio> </td> </tr>
         </table>
 		
 
@@ -49,9 +47,9 @@
             <tr> <td > Input speech: &emsp; &emsp; </td> <td> <audio controls>  <source src="speech2singing/model_architecture/sample1/read.wav" type="audio/wav">  </audio> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr>
         </table>
         <table>
-            <tr> <td > Jayneel: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample1/jay.wav" type="audio/wav">   </audio> </td> </tr>
+            <tr> <td style="color:Lime;"> Jayneel: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample1/jay.wav" type="audio/wav">   </audio> </td> </tr>
 
-            <tr> <td > Progressive Learning: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample1/my.wav" type="audio/wav">   </audio> </td> </tr>
+            <tr> <td style="color:Lime;"> Progressive Learning: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/model_architecture/sample1/my.wav" type="audio/wav">   </audio> </td> </tr>
         </table>
 		
 
@@ -60,9 +58,9 @@
             <tr> <td > Input speech: &emsp; &emsp; </td> <td> <audio controls>  <source src="speech2singing/ad vs mse/sample3/read.wav" type="audio/wav">  </audio> </td>  <td> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr>
         </table>
         <table>
-            <tr> <td> MEL+MSE: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/ad vs mse/sample3/mse.wav" type="audio/wav">   </audio> </td> </tr>
+            <tr> <td style="color:Lime;"> MEL+MSE: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/ad vs mse/sample3/mse.wav" type="audio/wav">   </audio> </td> </tr>
 
-            <tr> <td > MEL+AD: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/ad vs mse/sample3/ad.wav" type="audio/wav">   </audio> </td> </tr>
+            <tr> <td style="color:Lime;"> MEL+AD: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/ad vs mse/sample3/ad.wav" type="audio/wav">   </audio> </td> </tr>
         </table>
 		
 		<h3 style="color:blue;"> Sample D </h3>
@@ -70,9 +68,9 @@
             <tr> <td> Input speech: &emsp; &emsp; </td> <td> <audio controls>  <source src="speech2singing/ad vs mse/sample2/read.wav" type="audio/wav">  </audio> </td>  <td style="color:olive;"> &emsp; &emsp; &emsp; &emsp; </audio> </td> </tr>
         </table>
         <table>
-            <tr> <td> MEL+MSE: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/ad vs mse/sample2/mse.wav" type="audio/wav">   </audio> </td> </tr>
+            <tr> <td style="color:Lime;"> MEL+MSE: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/ad vs mse/sample2/mse.wav" type="audio/wav">   </audio> </td> </tr>
 
-            <tr> <td> MEL+AD: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/ad vs mse/sample2/ad.wav" type="audio/wav">   </audio> </td> </tr>
+            <tr> <td style="color:Lime;"> MEL+AD: &emsp; &emsp; </td> <td> <audio controls>  <source src= "speech2singing/ad vs mse/sample2/ad.wav" type="audio/wav">   </audio> </td> </tr>
         </table>
 
 		<h3 style="color:blue;"> Our MELGAN on DAMP </h3>
